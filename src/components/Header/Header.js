@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
+
 function Header() {
   return (
     <header className="justify-between d-flex align-center p-30">

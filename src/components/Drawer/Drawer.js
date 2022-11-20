@@ -1,7 +1,9 @@
+import style from './Drawer.module.scss'
+
 function Drawer() {
   return (
-    <div style={{ display: "none" }} className="overlay">
-      <div className="drawer">
+    <div style={{}} className={style.overlay}>
+      <div className={style.drawer}>
         <h2 className="mb-20 d-flex justify-between">
           Корзина
           <img

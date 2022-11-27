@@ -1,23 +1,23 @@
 import style from './Drawer.module.scss'
 
-function Drawer() {
+function Drawer(props) {
   return (
-    <div style={{display: 'none'}} className={style.overlay}>
+    <div className={style.overlay}>
       <div className={style.drawer}>
         <h2 className="mb-20 d-flex justify-between">
           Корзина
-          <img
+          <img onClick={props.onClose}
             className="removeBtn cu-p"
             width={30}
             height={30}
             src="https://i.ibb.co/Qf1bZyg/close-1.png"
-            alt="Remove"
+            alt="Close"
           />
         </h2>
 
         <div className="items">
           <div className="cardItem d-flex align-center mb-20">
-            <img
+            <img 
               className="ml-20 mb-40"
               width={110}
               height={140}

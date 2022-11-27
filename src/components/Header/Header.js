@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
+import React from "react";
 
-function Header() {
+function Header(props) {
   return (
     <header className="justify-between d-flex align-center p-30">
       <div className="d-flex align-center">
@@ -14,8 +15,8 @@ function Header() {
           <p className="opacity-4">Магазин лучших кроссовок</p>
         </div>
       </div>
-      <ul className="headerRight">
-        <li>
+      <ul className="headerRight cu-p ">
+        <li onClick={props.onClickCart}>
           <img
             width={18}
             height={18}

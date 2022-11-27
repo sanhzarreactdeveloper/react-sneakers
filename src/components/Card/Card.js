@@ -1,10 +1,18 @@
 import style from "./Card.module.scss";
-
+import React from "react";
 
 function Card(props) {
+
+  const [isAdded, setIsAdded] = React.useState(false);
+
+  const onClickPlus = () => {
+    setIsAdded(!isAdded)
+  };
+
+
   return (
     <div className={style.card}>
-      <div className="favorite">
+      <div className={style.favorite}  onClick={props.onFavorite}>
         <img
           width={36}
           height={36}
@@ -25,11 +33,11 @@ function Card(props) {
           <p>Цена:</p>
           <b>{props.price}</b>
         </div>
-        <button className="button" onClick={props.onClick}>
+        <button className={style.button} onClick={onClickPlus}>
           <img
             width="11"
             height="11"
-            src="https://cdn-icons-png.flaticon.com/512/232/232463.png"
+            src={isAdded ? "https://i.ibb.co/8Bnz2Zn/free-icon-checkmark-8625364.png" : "https://cdn-icons-png.flaticon.com/512/232/232463.png"}
             alt="Plus"
           />
         </button>

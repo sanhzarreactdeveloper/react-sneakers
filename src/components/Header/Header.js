@@ -17,7 +17,7 @@ function Header(props) {
       </div>
       <ul className="headerRight cu-p ">
         <li onClick={props.onClickCart}>
-          <img
+          <img 
             width={18}
             height={18}
             src="https://cdn-icons-png.flaticon.com/512/419/419910.png"
